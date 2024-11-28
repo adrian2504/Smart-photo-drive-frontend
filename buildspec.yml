@@ -15,7 +15,7 @@ phases:
       - cp -r lib ./build/
   post_build:
     commands:
-      - echo "Deploying to S3 bucket: adrian-photo-drive"
+      - echo "Deploying to S3 bucket:adrian-photo-drive"
       - aws s3 sync ./build s3://adrian-photo-drive --delete
 artifacts:
   files:
